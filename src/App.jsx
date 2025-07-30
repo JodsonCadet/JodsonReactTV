@@ -1,14 +1,24 @@
-/**
- * React TV is an web streaming platform that allows users to browse
- * through the episodes of a variety of different shows.
- */
-export default function App() {
+import { useState } from "react";
+import "./App.css";
+import ShowDetails from "./components/ShowDetails";
+import ShowSelection from "./components/ShowSelection";
+import showsData from "./shows/data.js";
+
+ function App() {
+  const [shows] = useState(showsData);
+  const [selectedShow, setSelectedShow] = useState(null);
+
   return (
     <>
       <header>
         <p>React TV</p>
+        <ShowSelection shows={shows} setSelectedShow={setSelectedShow} />
       </header>
-      <main></main>
+      <main>
+        <ShowDetails show={selectedShow} />
+      </main>
     </>
   );
 }
+
+export default App;

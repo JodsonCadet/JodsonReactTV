@@ -1,28 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.img {
+  width: 300px;
 }
 
-html {
-  color: white;
-  font-family: sans-serif;
-}
-
-body {
-  background: #111;
-}
-
-#root {
-  padding: 1rem;
-}
-
-header {
+.all-movies {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  width: 65vw;
 }
 
-button {
-  padding: 0.25rem 0.5rem;
+.individual-movie {
+  padding-left: 15px;
+  width: 350px;
+}
+
+.main {
+  display: flex;
+}
+
+.awards {
+  position: fixed;
+  top: 2em;
+}
+
+.showDetails {
+  position: sticky;
+  top: 0;
+}
+
+.displayAll {
+  display: flex;
 }
